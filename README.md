@@ -1,5 +1,10 @@
 # vue-p5-ts-boilerplate
 
+```
+vue 3.0.0
+p5 1.3.1
+```
+
 ## Project setup
 ```
 npm install
