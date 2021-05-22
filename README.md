@@ -1,4 +1,4 @@
-# suprematist-architecture
+# vue-p5-ts-boilerplate
 
 ## Project setup
 ```
