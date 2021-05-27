@@ -1,17 +1,17 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Sketch from './components/Sketch.vue';
+import Stream from './components/Stream.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    Sketch,
+    Stream,
   },
 });
 </script>
 
 <template>
-  <sketch />
+  <stream />
 </template>
 
 <style lang="scss">
