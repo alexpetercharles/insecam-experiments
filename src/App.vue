@@ -1,5 +1,7 @@
 <script lang="ts">
-import { defineComponent, defineAsyncComponent } from 'vue';
+import { defineComponent, defineAsyncComponent, ref } from 'vue';
+
+import streamSource from '@/streams.json';
 
 const asyncStream = defineAsyncComponent(() => import('./components/Stream.vue'));
 
@@ -8,20 +10,20 @@ export default defineComponent({
   components: {
     asyncStream,
   },
+  setup() {
+    const streamCount = 9;
+    const streams = ref([] as string[]);
+    for (let i = 0; i < streamCount; i += 1) {
+      streams.value.push(streamSource[Math.floor(Math.random() * streamSource.length)]);
+    }
+    return { streams };
+  },
 });
 </script>
 
 <template>
   <div class="container">
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
-      <async-stream class="stream" :src="'http://166.165.35.32/mjpg/video.mjpg'" />
+      <async-stream v-for="src in streams" class="stream" :src="src" :key="src" />
   </div>
 </template>
 

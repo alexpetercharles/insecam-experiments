@@ -1,0 +1,18 @@
+[
+  "http://166.165.35.32/mjpg/video.mjpg",
+  "http://81.149.56.38:8084/mjpg/video.mjpg",
+  "http://78.27.189.141/mjpg/video.mjpg",
+  "http://83.3.56.24:5000/cgi-bin/viewer/video.jpg?r=COUNTER",
+  "http://220.254.136.178/cgi-bin/camera?resolution=640&amp;quality=1&amp;Language=0&amp;COUNTER",
+  "http://24.197.59.198/mjpg/video.mjpg",
+  "http://217.128.111.137:8081/mjpg/video.mjpg",
+  "http://92.110.122.229:8080/mjpg/video.mjpg",
+  "http://176.163.181.87:8082/mjpg/video.mjpg",
+  "http://80.12.90.221:8082/mjpg/video.mjpg",
+  "http://81.150.43.28/mjpg/video.mjpg",
+  "http://62.242.189.219/mjpg/video.mjpg",
+  "http://80.13.120.225:8082/mjpg/video.mjpg",
+  "http://81.149.36.95:8081/mjpg/video.mjpg",
+  "http://27.121.187.167:8080/?action=stream",
+  "http://83.103.195.172:82/mjpg/video.mjpg"
+]
