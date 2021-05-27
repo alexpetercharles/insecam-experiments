@@ -1,20 +1,29 @@
 <script lang="ts">
-import { defineComponent, onMounted, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Sketch',
-  setup() {
+  props: {
+    src: {
+      type: String,
+      required: true,
+    },
   },
 });
 </script>
 
 <template>
-  <div ref="container" class="container" />
+  <div class="stream">
+    <img :src="src" />
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.container {
-  height: 100%;
-  width: 100%;
+.stream {
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 </style>
